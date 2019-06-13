@@ -25,7 +25,7 @@
     },
     data: function () {
       return {
-        films: []
+        films: [],
       }
     },
     methods: {
@@ -56,7 +56,13 @@
   }
   a {
     color: #0000FF;
+    text-decoration: none;
   }
+
+  a:hover {
+    color: #c1c1ff;
+  }
+
   .clear {
     clear: both;
     height: 0;
