@@ -1,6 +1,49 @@
 <template>
-       <router-view />
+  <div id="app">
+        <h1>Star Wars Movie API</h1> 
+        <table>
+            <thead>
+                <tr>
+                <th>id</th>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Release Date</th>
+                </tr>
+            </thead>
+            <GetApi :film="film" v-for="(film, index) in films" :key="index"></GetApi>
+          </table> 
+  </div>
 </template>
+
+<script>
+  import axios from 'axios'
+  import GetApi from '../components/GetApi'
+  export default {
+    name: 'app',
+    components: {    
+      GetApi
+    },
+    data: function () {
+      return {
+        films: []
+      }
+    },
+    methods: {
+      fetchFilms: function () {
+        axios.get('https://swapi.co/api/films/').then((response) => {
+          this.films = response.data.results
+          console.log(response.data.results)
+        }, (error) => {
+          console.log(error)
+        })
+      }
+    },
+    mounted: function () {
+      this.fetchFilms()
+    }
+  }
+</script>
+
 
 <style>
   body {
