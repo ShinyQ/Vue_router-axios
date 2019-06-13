@@ -3,6 +3,34 @@
 </template>
 
 <style>
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;  
+  }
+  .button-detail {background-color: #008CBA;} /* Blue */
+  
+  .progress {
+    background-color: #ffb144; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 10px;  
+  }
+
   body {
     background-color: #444444;
     font-family: Verdana, Helvetica, Arial;
@@ -13,14 +41,19 @@
   }
   a {
     color: #0000FF;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #75a0ff;
   }
   .clear {
     clear: both;
     height: 0;
     overflow: hidden;
   }
+
   #app {
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
     background-color: #FFF;
     padding: 20px 40px;
@@ -69,7 +102,11 @@
     margin: 12px 0;
   }
   h4 {
-    margin-bottom: 5px;
+     margin-top: 0px;
+    margin-bottom: 18px;
+  }
+  h3{
+    margin-top: 0;
   }
   table {
       border-collapse: collapse;
@@ -78,10 +115,19 @@
   th, td {
       text-align: left;
       padding: 8px;
+      border: 1px solid #ddd;
   }
+
+
   tr:nth-child(even){background-color: #f2f2f2}
   th {
-      background-color: #4CAF50;
+    border: 1px solid white;
+      background-color: #008CBA;
       color: white;
   }
+  p{
+    line-height: 1.6;
+    text-align: justify
+  }
+  
 </style>
